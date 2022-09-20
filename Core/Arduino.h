@@ -16,7 +16,7 @@
 #include "menu.h"
 #include "HAL_Encoder.h"
 #include "ds18b20.h"
-#include "IRremote.h"
+
 
 
 #define LOW                     0x0

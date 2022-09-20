@@ -48,9 +48,6 @@ void TIM2_SetPWM(uint8_t pin,uint16_t PWM_DutyCycle, uint32_t PWM_Frequency)
 
 
 
-
-
-
 void TIM1_SetPWM(uint8_t pin,uint16_t PWM_DutyCycle, uint32_t PWM_Frequency)
 {
      
@@ -105,6 +102,13 @@ void TIM1_SetPWM(uint8_t pin,uint16_t PWM_DutyCycle, uint32_t PWM_Frequency)
 
 
 
+/**
+  * @brief  PWM输出初始化
+  * @param  Pin:引脚编号
+  * @param  Resolution: PWM分辨率
+  * @param  Frequency: PWM频率
+  * @retval 引脚对应的定时器通道
+  */
 int PWM_Init(uint8_t pin,uint16_t PWM_DutyCycle, uint32_t PWM_Frequency)
 {
    

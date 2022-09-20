@@ -1973,7 +1973,7 @@
   <group>
     <name>Libraries</name>
     <file>
-      <name>$PROJ_DIR$\..\Libraries\IRremote-3.9.0\src\IRremote.hpp</name>
+      <name>$PROJ_DIR$\..\Libraries\SSD1306\SSD1306.cpp</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\Libraries\TMT\TMT.cpp</name>

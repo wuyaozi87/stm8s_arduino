@@ -1,34 +1,28 @@
 #ifndef __DS18B20_H
 #define __DS18B20_H
 
-
 #include "Arduino.h"
 
-#define set_dq(x) 	digitalWrite(_dq_pin,x)
 
-#define dq_out()    pinMode(_dq_pin,OUTPUT)
-#define dq_in()     pinMode(_dq_pin,INPUT_NO_IT)
+#define DS18B20_GPIO    GPIOA
+#define DS18B20_PIN     GPIO_PIN_3
 
 
-class DS18B20
-{
+#define set_dq_low      DS18B20_GPIO->ODR &= (uint8_t)(~DS18B20_PIN)
+#define set_dq_high     DS18B20_GPIO->ODR |= (uint8_t)DS18B20_PIN
 
-public:
+#define dq_out          DS18B20_GPIO->DDR |= (uint8_t)DS18B20_PIN
+#define dq_in           DS18B20_GPIO->CR1 |= (uint8_t)DS18B20_PIN
 
-	DS18B20(uint8_t pin);
-	float get_temp();
-	void reset();
-
-private:
-	uint8_t _dq_pin;
-	uint8_t read_byte();
-	void write_byte(uint8_t data);
-		
-};
+#define dq_read         DS18B20_GPIO->IDR & (uint8_t)DS18B20_PIN
 
 
 
-extern DS18B20 ds;
+
+uint16_t get_temp();
+
+
+
 
 
 #endif

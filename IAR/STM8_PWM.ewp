@@ -268,7 +268,6 @@
           <state>$PROJ_DIR$\..\Libraries\ButtonEvent</state>
           <state>$PROJ_DIR$\..\User\HAL</state>
           <state>$PROJ_DIR$\..\Libraries\DS18B20</state>
-          <state>$PROJ_DIR$\..\Libraries\IRremote-3.9.0\src</state>
         </option>
         <option>
           <name>CCStdIncCheck</name>
@@ -1632,7 +1631,7 @@
   <group>
     <name>Libraries</name>
     <file>
-      <name>$PROJ_DIR$\..\Libraries\IRremote-3.9.0\src\IRremote.hpp</name>
+      <name>$PROJ_DIR$\..\Libraries\SSD1306\SSD1306.cpp</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\Libraries\TMT\TMT.cpp</name>

@@ -36,10 +36,12 @@ static unsigned int mini_itoa(int value, unsigned int radix, unsigned int upperc
 
   for(i = (pbuffer - buffer);i<zero_pad;i++)
     *(pbuffer++)= '0';
+   
   if(negative)
      *(pbuffer++) = '-';
   
   *(pbuffer) = '\0';
+  
   len = (pbuffer - buffer);
   for (i = 0; i < len / 2; i++)
   {
